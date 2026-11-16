@@ -79,21 +79,68 @@ Para validar a atuação do agente em situações reais de laboratório, foram c
 
 ---
 
-## 📸 Pasta de Evidências (`evidencias/`)
+## Pasta de Evidências (`evidencias/`)
 
-A pasta [`evidencias/`](evidencias/) reúne os prints e registros de execução que comprovam a atuação do agente e a resolução dos problemas:
+A pasta [`evidencias/`](evidencias/) reúne os prints e gravações que comprovam a atuação do agente em cada etapa do ciclo de análise:
 
-1. **Perguntas de Contexto:** Print do agente questionando sobre ambiente, dados e privilégios antes de emitir qualquer diagnóstico.
-   - ![Contexto Investigativo](evidencias/01_contexto_investigativo.png)
-2. **PoC de SQL Injection no Login:** Demonstração da falha de SQL Injection no login do `app.py` utilizando o payload `admin' --`.
-   - 🎥 Vídeo da PoC: [`evidencias/02_poc_sqli_login.mp4`](evidencias/02_poc_sqli_login.mp4)
-3. **Análise de SQLi Avançado:** Comparação das respostas das rotas (ex.: `/produto?id=1'` e `-1 UNION SELECT...` retornando `[]` seguro após a parametrização).
-4. **Bloqueio de Boolean Blind:** Ambas as requisições (`1=1` e `1=2`) retornando `false`, destruindo o canal de inferência do atacante.
-5. **Relatório de Triagem do Malware:** Detecção dos padrões de ofuscação e exfiltração do `app_malware_benigno.py`.
+### 1. Investigação de Contexto (Postura Profissional)
+Print do agente questionando sobre o ambiente, sensibilidade dos dados e privilégios antes de emitir qualquer diagnóstico:
+
+![Contexto Investigativo](evidencias/01_contexto_investigativo.png)
 
 ---
 
-## 🚀 Como Executar o Agente no seu Harness
+### 2. Prova de Conceito (PoC) de SQL Injection no Login
+Demonstração em vídeo da falha de SQL Injection no login do `app.py` utilizando o payload `admin' --`:
+
+https://github.com/user-attachments/assets/a9dfbfe7-c6eb-44c7-81cd-a7e6c8b86625
+
+---
+
+### 3. Raio-X do Laboratório de SQL Injection Avançado (`app_sqli_avancado.py`)
+Mapeamento e classificação técnica das 5 vulnerabilidades (Error/Union-based, LIKE f-strings, ORDER BY, Boolean Blind e Second-Order SQLi) junto com a Matriz de Severidade:
+
+<details>
+<summary>🔍 <b>Clique para expandir os prints da Análise de SQLi Avançado (Partes 1 a 3)</b></summary>
+<br>
+
+**Parte 1:** Mapeamento dos endpoints `/produto` e `/busca`:
+![Análise SQLi Avançado - Parte 1](evidencias/03_analise_sqli_avancado_p1.png)
+
+**Parte 2:** Falhas nas cláusulas `ORDER BY` em `/pedidos` e Boolean Blind em `/api/usuario-existe`:
+![Análise SQLi Avançado - Parte 2](evidencias/03_analise_sqli_avancado_p2.png)
+
+**Parte 3:** Injeção de Segunda Ordem em `/registro`/`/perfil` e Matriz de Avaliação de Risco:
+![Análise SQLi Avançado - Parte 3](evidencias/03_analise_sqli_avancado_p3.png)
+
+</details>
+
+---
+
+### 4. Triagem Estática de Ameaças & Detecção de Malware (`app_malware_benigno.py`)
+Relatório completo identificando ofuscação em Base64, coleta recursiva, exfiltração via HTTP e correlação com o framework MITRE ATT&CK:
+
+<details>
+<summary>🔍 <b>Clique para expandir os prints da Triagem de Malware (Partes 1 a 4)</b></summary>
+<br>
+
+**Parte 1:** Detecção de ofuscação em Base64 e rotina de coleta recursiva:
+![Triagem Malware - Parte 1](evidencias/04_triagem_malware_mitre_p1.png)
+
+**Parte 2:** Identificação de exfiltração web HTTPS e execução de utilitários de sistema:
+![Triagem Malware - Parte 2](evidencias/04_triagem_malware_mitre_p2.png)
+
+**Parte 3:** Tabela de correlação direta com táticas e técnicas do MITRE ATT&CK:
+![Triagem Malware - Parte 3](evidencias/04_triagem_malware_mitre_p3.png)
+
+**Parte 4:** Cálculo de risco e recomendações defensivas de resposta a incidentes:
+![Triagem Malware - Parte 4](evidencias/04_triagem_malware_mitre_p4.png)
+
+</details>
+
+---
+
+## Como Executar o Agente no seu Harness
 
 Este projeto segue o padrão aberto `AGENTS.md` e é compatível com qualquer harness moderno (**Google Antigravity**, **Hermes CLI**, **Claude Code**, **Cursor**, etc.).
 
