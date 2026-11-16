@@ -79,27 +79,29 @@ Para validar a atuação do agente em situações reais de laboratório, foram c
 
 ---
 
-## Pasta de Evidências (`evidencias/`)
+## 📸 Pasta de Evidências (`evidencias/`)
 
 A pasta [`evidencias/`](evidencias/) reúne os prints e registros de execução que comprovam a atuação do agente e a resolução dos problemas:
 
-1. **Perguntas de Contexto:** Prints do agente questionando sobre ambiente, dados e privilégios antes de emitir qualquer diagnóstico.
-2. **PoC de SQL Injection no Login:** Comprovação da autenticação indevida via `admin' --` e sua posterior mitigação.
+1. **Perguntas de Contexto:** Print do agente questionando sobre ambiente, dados e privilégios antes de emitir qualquer diagnóstico.
+   - ![Contexto Investigativo](evidencias/01_contexto_investigativo.png)
+2. **PoC de SQL Injection no Login:** Demonstração da falha de SQL Injection no login do `app.py` utilizando o payload `admin' --`.
+   - 🎥 Vídeo da PoC: [`evidencias/02_poc_sqli_login.mp4`](evidencias/02_poc_sqli_login.mp4)
 3. **Análise de SQLi Avançado:** Comparação das respostas das rotas (ex.: `/produto?id=1'` e `-1 UNION SELECT...` retornando `[]` seguro após a parametrização).
 4. **Bloqueio de Boolean Blind:** Ambas as requisições (`1=1` e `1=2`) retornando `false`, destruindo o canal de inferência do atacante.
 5. **Relatório de Triagem do Malware:** Detecção dos padrões de ofuscação e exfiltração do `app_malware_benigno.py`.
 
 ---
 
-## Como Executar o Agente no seu Harness
+## 🚀 Como Executar o Agente no seu Harness
 
 Este projeto segue o padrão aberto `AGENTS.md` e é compatível com qualquer harness moderno (**Google Antigravity**, **Hermes CLI**, **Claude Code**, **Cursor**, etc.).
 
 ### Rodando no Google Antigravity ou Cursor
 1. Abra a pasta do projeto no VS Code ou Antigravity IDE:
    ```bash
-   git clone https://github.com/<seu-usuario>/<seu-repositorio>.git
-   cd <seu-repositorio>
+   git clone https://github.com/brzRaven01001/dio-agent-appsec.git
+   cd dio-agent-appsec
    ```
 2. Abra a interface de chat do agente. O harness lerá automaticamente o [AGENTS.md](AGENTS.md) na inicialização.
 3. Envie uma mensagem solicitando uma análise de segurança:
