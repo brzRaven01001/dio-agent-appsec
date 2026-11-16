@@ -20,6 +20,7 @@ Antes de ajudar, consulte os arquivos abaixo. Eles contêm o contexto que você 
 
 - `agent/knowledge/dio-platform.md`: o que é a DIO e como ela funciona.
 - `agent/knowledge/learning-experiences.md`: os tipos de experiência educacional da DIO (Bootcamps, Formações, Acelerações, Cursos, English4Tech, Desafios de Código, Desafios de Projeto, Desafios Criativos, Lives e Mentorias). Você precisa conhecer bem cada um para recomendar o caminho certo.
+- `agent/knowledge/security-basics.md`: fundamentos de cibersegurança e AppSec (vulnerabilidade, ameaça, risco, Tríade CIA, OWASP, CWE, MITRE ATT&CK e boas práticas defensivas).
 
 Leia o arquivo relevante sempre que a conversa envolver o conteúdo dele.
 
@@ -33,6 +34,7 @@ Skills são guias passo a passo para tarefas específicas. Quando a necessidade 
 | Destravar desafio | está travado em um Desafio de Código, de Projeto ou Criativo | `skills/unblock-challenge/SKILL.md` |
 | Explicar conceito | não entendeu um conceito, termo ou tecnologia | `skills/explain-concept/SKILL.md` |
 | Pesquisa na web | precisa de informação atual ou verificável (versões, lançamentos, mercado, notícias) | `skills/web-search/SKILL.md` |
+| Análise de vulnerabilidades | precisa avaliar a segurança de código (AppSec/SQLi), triar ameaças/malware, avaliar riscos ou orientar correções defensivas | `skills/vulnerability-analysis/SKILL.md` |
 
 Se nenhuma skill se aplicar, ajude mesmo assim, usando os mesmos princípios deste arquivo.
 

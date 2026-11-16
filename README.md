@@ -1,160 +1,126 @@
-# 🤖 DIO Agent
+# DIO Agent — Especialização em Cibersegurança & AppSec
 
-> Seu mentor de Inteligência Artificial para aprender mais e melhor na [DIO](https://dio.me).
-
-O **DIO Agent** é um agente de IA que acompanha você na sua jornada de estudos. Ele conhece as experiências da DIO (Bootcamps, Formações, Cursos, Desafios e muito mais) e ajuda você a estudar com mais clareza, destravar desafios e entender qualquer conceito.
-
-E você não precisa instalar nada complicado. Em **3 passos simples**, o seu mentor de IA estará pronto para usar.
+> **Repositório Base Original:** [digitalinnovationone/dio-agent](https://github.com/digitalinnovationone/dio-agent)  
+> **Desafio de Projeto:** Trilha Santander — Cibersegurança do Zero à Prática ([DIO](https://dio.me))  
+> **Mentor de IA Especializado:** Análise de Vulnerabilidades, Auditoria de SQL Injection e Triagem de Ameaças/Malware.
 
 ---
 
-## ✨ Antes de começar: dois conceitos rápidos
+## Visão Geral do Projeto
 
-Para usar o DIO Agent, basta entender duas palavras. As duas estão no [Glossário completo](docs/glossary.md), mas aqui vai a versão rápida:
+Este repositório contém a evolução do **DIO Agent**, transformando o mentor educacional generalista da DIO em um **Especialista em Segurança de Aplicações (AppSec) e Segurança Defensiva**.
 
-- 🧠 **Agente de IA:** um chatbot comum responde perguntas, como um buscador mais esperto. Um *agente* de IA vai além: ele lê, planeja e executa passos para te ajudar a alcançar um objetivo. É a diferença entre alguém que te explica o caminho e alguém que caminha junto com você. O DIO Agent é um agente desse tipo: um tutor particular que acompanha a sua evolução.
-
-- 🖥️ **Harness:** é o programa onde a conversa com o agente acontece. Vale a comparação: o agente é o professor, e o harness é a sala de aula. O mesmo professor pode dar aula em salas diferentes. Por isso o DIO Agent funciona em qualquer harness: você escolhe a "sala" no Passo 1, e o seu mentor continua o mesmo.
-
-Pronto. Com isso já dá para começar.
+Na arquitetura baseada no padrão aberto `AGENTS.md`, **nenhum modelo de inteligência artificial é treinado do zero**. O agente adquire novos comportamentos, conhecimentos teóricos e metodologias profissionais através de arquivos em Markdown estruturados (skills, base de conhecimento e persona).
 
 ---
 
-## 🎯 O que o DIO Agent faz por você
+## Por Que Esta Especialização Foi Criada?
 
-| Você precisa de... | O DIO Agent... |
-|--------------------|----------------|
-| Saber por onde começar | Monta um plano de estudos no seu ritmo |
-| Destravar um desafio | Te guia até a solução, sem entregar a resposta pronta |
-| Entender um conceito | Explica de forma simples, com analogias e exemplos |
+Em cibersegurança e engenharia de software, respostas rápidas e automáticas sem contexto costumam gerar falsos positivos ou introduzir comandos destrutivos. 
 
-Ele conhece os formatos da DIO: Bootcamps, Formações, Acelerações, Cursos, English4Tech, Desafios de Código, Desafios de Projeto, Desafios Criativos, Lives e Mentorias. Assim, as recomendações sempre apontam para algo que você já tem na plataforma.
-
----
-
-## 🚀 Comece em 3 passos
-
-### 1️⃣ Instale um Harness
-
-O harness é o programa que dá vida ao agente. Recomendamos o **Google Antigravity**, que tem limites de uso mais generosos para quem está começando. Mas qualquer harness moderno funciona.
-
-| Harness | Documentação oficial |
-|---------|----------------------|
-| Google Antigravity (recomendado) | https://antigravity.google/docs |
-| Claude Code | https://docs.claude.com/en/docs/claude-code |
-| Codex | https://developers.openai.com/codex |
-| OpenCode | https://opencode.ai/docs |
-| Hermes | https://hermes-agent.nousresearch.com/docs |
-
-Escolha um e siga o passo a passo da documentação oficial dele. Cada documentação já traz tudo certinho para o seu sistema, então a instalação é tranquila.
-
-### 2️⃣ Configure o DIO Agent
-
-Agora você vai baixar este repositório para o seu computador. Escolha a forma mais simples para você:
-
-**Opção A: com Git** (se você já usa Git)
-
-```bash
-git clone https://github.com/digitalinnovationone/dio-agent.git
-```
-
-**Opção B: baixando o .zip** (se você não usa Git)
-
-Na página do repositório no GitHub, clique no botão verde **Code** e depois em **Download ZIP**. Em seguida, extraia a pasta em um lugar fácil de encontrar.
-
-Com o repositório baixado, abra a pasta `dio-agent` no harness que você instalou. Cada harness tem o seu jeito de abrir uma pasta de projeto, e a documentação dele mostra como fazer isso.
-
-E é só isso! O harness lê automaticamente o arquivo `AGENTS.md` e o agente já sabe quem é: o seu mentor de estudos da DIO.
-
-> 🔄 **Fique de olho nas atualizações.** Não importa se você usou o Git ou o .zip: o repositório do DIO Agent evolui com o tempo. De tempos em tempos, vale voltar aqui e pegar a versão mais recente. Quem usou Git pode rodar `git pull` (ou pedir pro próprio DIO Agent rodar); quem baixou o .zip pode baixar de novo. Assim o seu mentor está sempre com o melhor que a gente tem a oferecer.
-
-### 3️⃣ Hands On!
-
-Agora é só conversar. Você pode falar naturalmente, com as suas palavras. Mas, principalmente nas primeiras vezes, vale usar um modelo de prompt pronto: é só copiar e preencher os campos entre colchetes. Quanto mais contexto você dá, melhor o agente ajuda.
-
-**🗺️ Plano de estudos**
-
-```
-Quero montar um plano de estudos (se possível, com materiais complementares).
-- Meu objetivo: [ex: aprender mais sobre IA, ser dev back-end, concluir um bootcamp]
-- Experiência ou carreira da DIO: [URL ou nome do bootcamp/formação, ou de uma carreira da DIO]
-- Meu nível hoje: [iniciante, intermediário, avançado]
-- Tempo disponível: [ex: 1 hora por dia, de segunda a sexta]
-```
-
-**🔓 Destravar desafio**
-
-```
-Estou travado em um Desafio de [Código, Projeto ou Criativo] da DIO.
-- O que o desafio pede: [cole o enunciado ou descreva]
-- Onde eu travei: [explique o ponto da dificuldade]
-- Meu código atual: [cole aqui, se for Desafio de Código]
-- Link do repositório base: [cole aqui, se for Desafio de Projeto]
-Me ajuda a destravar sem dar a resposta pronta.
-```
-
-**💡 Explicar conceito**
-
-```
-Me explica o conceito de [ex: API, laço de repetição, herança].
-- Meu nível: [nunca vi, já ouvi falar, quero aprofundar]
-- Onde apareceu: [ex: no curso X de um bootcamp] (opcional)
-```
-
-Não precisa de comando especial nem de formato perfeito: o agente conduz a conversa a partir daí e pede mais detalhes se precisar.
+A especialização em **Análise de Vulnerabilidades (`vulnerability-analysis`)** foi concebida para que o agente atue exatamente como um profissional sênior de segurança da informação:
+1. **Mentalidade Investigativa:** Nunca sugere correções ou comandos sem antes perguntar e entender o ambiente (produção vs laboratório, dados expostos, privilégios).
+2. **Avaliação Estruturada de Riscos:** Calcula severidade combinando **Impacto** e **Probabilidade**, correlacionando com a **Tríade CIA** (Confidencialidade, Integridade e Disponibilidade).
+3. **Padrões de Mercado:** Mapeia fraquezas no **CWE**, categorias do **OWASP Top 10** e táticas/técnicas do **MITRE ATT&CK**.
+4. **Cultura DevSecOps (Secure by Design):** Guia o desenvolvedor a resolver a causa-raiz (ex.: consultas parametrizadas, allowlists) em vez de adotar soluções paliativas frágeis.
 
 ---
 
-## 🧩 As skills do agente
+## A Árvore de Habilidades de Segurança (Skill Tree)
 
-Uma **skill** é uma habilidade do agente, descrita em um guia passo a passo. O DIO Agent vem com três:
+O agente foi dotado de três grandes pilares operacionais dentro da skill `vulnerability-analysis`:
 
-| Skill | Para que serve |
-|-------|----------------|
-| [Plano de estudos](skills/study-plan/SKILL.md) | Organiza o que estudar, em que ordem e em quanto tempo |
-| [Destravar desafio](skills/unblock-challenge/SKILL.md) | Conduz você até a solução de um desafio, sem dar a resposta pronta |
-| [Explicar conceito](skills/explain-concept/SKILL.md) | Explica conceitos de forma didática, com analogias e exemplos |
-
-Você não precisa "chamar" uma skill. O agente percebe o que você precisa e usa a skill certa sozinho.
+| Habilidade Especializada | Por Que Foi Adicionada? | O Que o Agente Faz? |
+| :--- | :--- | :--- |
+| **Auditoria Especializada em SQL Injection (SQLi)** | É uma das falhas mais antigas, perigosas e prevalentes da web (OWASP A03:2021 / CWE-89), causando vazamentos em massa e bypass de autenticação. | Detecta interpolações e concatenações inseguras; diferencia injeções In-band (Error e Union), Blind (Booleana/Tempo), injeções em `ORDER BY` e Second-Order; orienta a aplicação de *Prepared Statements* e Allowlists. |
+| **Identificação e Triagem de Malware (Threat Triage)** | Analistas de segurança frequentemente precisam avaliar códigos e utilitários suspeitos que tentam se passar por ferramentas legítimas (*Dual-Use*). | Realiza análise estática; detecta ofuscação em Base64, chamadas de sistema (`subprocess`), coleta recursiva de arquivos, compactação não autorizada e exfiltração de dados via canais HTTP. |
+| **Exploração Ética & PoC Defensivo** | Em auditorias, é crucial demonstrar o impacto técnico para o time de desenvolvimento sem causar negação de serviço ou danos. | Elabora Provas de Conceito (PoC) didáticas e controladas para laboratório, correlacionando-as com técnicas adversárias do MITRE ATT&CK (ex.: T1190, T1027, T1560, T1567). |
 
 ---
 
-## 🗂️ Estrutura do repositório
+## Arquivos Criados e Alterados
 
-```
-dio-agent/
-├── README.md                        Este guia
-├── AGENTS.md                        Definição do agente (lida por qualquer harness)
-├── CLAUDE.md                        Atalho para o Claude Code
-│
-├── agent/
-│   ├── persona.md                   A personalidade e o tom do agente
-│   └── knowledge/
-│       ├── dio-platform.md          O que é a DIO
-│       └── learning-experiences.md  Os formatos de aprendizado da DIO
-│
-├── skills/
-│   ├── README.md                    O que são skills
-│   ├── study-plan/                  Skill: plano de estudos
-│   ├── unblock-challenge/           Skill: destravar desafio
-│   └── explain-concept/             Skill: explicar conceito
-│
-└── docs/
-    └── glossary.md                  Glossário de termos
-```
+Toda a inteligência e o comportamento do agente são governados pelos seguintes arquivos no repositório:
 
-> 🔍 **Por que funciona em qualquer harness?** O coração do projeto é o arquivo `AGENTS.md`, um padrão aberto que harnesses modernos sabem ler. O `CLAUDE.md` apenas aponta para ele, então você pode usar o harness que preferir.
+| Arquivo | Tipo | Descrição do Conteúdo |
+| :--- | :--- | :--- |
+| [`agent/knowledge/security-basics.md`](agent/knowledge/security-basics.md) | **Novo** (Base de Conhecimento) | Fundamentos teóricos: Tríade CIA, equação de risco ($Risco = P \times I$), taxonomia completa de SQL Injection, fundamentos de análise de malware (IOCs, hashes) e Secure by Design. |
+| [`skills/vulnerability-analysis/SKILL.md`](skills/vulnerability-analysis/SKILL.md) | **Novo** (Roteiro Operacional) | O fluxo em 6 passos que o agente executa: Investigação de Contexto $\rightarrow$ Classificação CWE/OWASP $\rightarrow$ Matriz de Risco $\rightarrow$ MITRE ATT&CK $\rightarrow$ Playbooks Técnicos $\rightarrow$ Validação. |
+| [`skills/vulnerability-analysis/README.md`](skills/vulnerability-analysis/README.md) | **Novo** (Documentação da Skill) | Guia explicativo voltado para pessoas desenvolvedoras e avaliadoras sobre como a skill funciona e como acioná-la. |
+| [`agent/persona.md`](agent/persona.md) | **Alterado** (Persona) | Adicionados os traços de comportamento em segurança: postura defensiva, ética inegociável e a proibição explícita de sugerir comandos sem validar o contexto do ambiente. |
+| [`AGENTS.md`](AGENTS.md) | **Alterado** (Fonte Única da Verdade) | Registro do arquivo `security-basics.md` na base de conhecimento e inclusão da skill `vulnerability-analysis` na tabela oficial de habilidades do agente. |
 
 ---
 
-## 📖 Glossário rápido
+## Laboratório Prático de Testes
 
-Termos como *agente*, *harness*, *skill* e *prompt* estão explicados com analogias simples no **[Glossário completo](docs/glossary.md)**. Se algum termo soar estranho, comece por lá.
+Para validar a atuação do agente em situações reais de laboratório, foram criadas três aplicações em Python:
+
+### 1. `app.py` — Sistema de Login Vulnerável a SQLi Clássico
+- **Cenário:** Formulário de login em Flask com SQLite onde a consulta montava a instrução SQL concatenando strings (`WHERE usuario = '...' + usuario`).
+- **Falha Demonstrada:** Bypass completo de autenticação com o payload `admin' --`, logando como administrador sem senha legítima.
+- **Correção Validada:** Implementação de consulta parametrizada com marcadores `?`.
+
+### 2. `app_sqli_avancado.py` — Loja Virtual com 5 Variantes de SQL Injection
+- **Cenário:** API REST com produtos, pedidos e usuários, explorando nuances que passam despercebidas em revisões comuns:
+  1. `/produto`: In-band Error-Based e Union-Based SQLi.
+  2. `/busca`: SQLi dentro de cláusula `LIKE` via f-string.
+  3. `/pedidos`: Injeção na cláusula `ORDER BY` (onde marcadores `?` não funcionam no SQL, exigindo **Allowlist estrita**).
+  4. `/api/usuario-existe`: SQLi Cego / Booleano (Boolean Blind).
+  5. `/registro` e `/perfil`: Sanitização ingênua com `.replace("--", "")` e **Second-Order SQL Injection**.
+
+### 3. `app_malware_benigno.py` — Triagem de Malware & Exfiltração
+- **Cenário:** Utilitário que se apresenta como script de backup, mas possui rotina oculta de *Stealer*.
+- **Comportamentos Detectados pelo Agente:**
+  - URL de comando e controle (C2) ofuscada em Base64.
+  - Varredura recursiva de diretórios (`os.walk`) e compactação em `.zip`.
+  - Exfiltração via requisições HTTP POST externas.
+  - Mapeamento das técnicas MITRE ATT&CK: T1027, T1083, T1560, T1567 e T1070.
 
 ---
 
-## 💬 Sobre este projeto
+## Pasta de Evidências (`evidencias/`)
 
-O DIO Agent foi criado para acompanhar você desde o início dos Bootcamps e Formações da DIO. A ideia é simples: aprender na era da IA fica mais fácil quando você tem um mentor disponível a qualquer hora.
+A pasta [`evidencias/`](evidencias/) reúne os prints e registros de execução que comprovam a atuação do agente e a resolução dos problemas:
 
-Bons estudos, e vem com a gente. 🚀
+1. **Perguntas de Contexto:** Prints do agente questionando sobre ambiente, dados e privilégios antes de emitir qualquer diagnóstico.
+2. **PoC de SQL Injection no Login:** Comprovação da autenticação indevida via `admin' --` e sua posterior mitigação.
+3. **Análise de SQLi Avançado:** Comparação das respostas das rotas (ex.: `/produto?id=1'` e `-1 UNION SELECT...` retornando `[]` seguro após a parametrização).
+4. **Bloqueio de Boolean Blind:** Ambas as requisições (`1=1` e `1=2`) retornando `false`, destruindo o canal de inferência do atacante.
+5. **Relatório de Triagem do Malware:** Detecção dos padrões de ofuscação e exfiltração do `app_malware_benigno.py`.
+
+---
+
+## Como Executar o Agente no seu Harness
+
+Este projeto segue o padrão aberto `AGENTS.md` e é compatível com qualquer harness moderno (**Google Antigravity**, **Hermes CLI**, **Claude Code**, **Cursor**, etc.).
+
+### Rodando no Google Antigravity ou Cursor
+1. Abra a pasta do projeto no VS Code ou Antigravity IDE:
+   ```bash
+   git clone https://github.com/<seu-usuario>/<seu-repositorio>.git
+   cd <seu-repositorio>
+   ```
+2. Abra a interface de chat do agente. O harness lerá automaticamente o [AGENTS.md](AGENTS.md) na inicialização.
+3. Envie uma mensagem solicitando uma análise de segurança:
+   > *"Atue como especialista em AppSec e analise a segurança do arquivo app.py."*
+
+### Rodando no Hermes CLI
+1. Certifique-se de que o Hermes está instalado e abra o terminal **exatamente na pasta raiz do projeto**:
+   ```bash
+   hermes
+   ```
+2. Converse com o agente e confira o acionamento da skill `vulnerability-analysis`.
+
+---
+
+## Checklist de Conformidade do Desafio
+
+- [x] Skill nova criada em `skills/vulnerability-analysis/` com `SKILL.md` e `README.md`.
+- [x] Base teórica criada em `agent/knowledge/security-basics.md`.
+- [x] Persona atualizada em `agent/persona.md` com postura investigativa e defensiva.
+- [x] Skill registrada na tabela oficial do `AGENTS.md`.
+- [x] Testes realizados exclusivamente com códigos e servidores locais de laboratório (`127.0.0.1`).
+- [x] Códigos vulneráveis e mitigados documentados e organizados.
+- [x] Pasta de evidências estruturada para prints comprobatórios.
+- [x] Repositório público no GitHub com nome legível em minúsculas e sem acentos.
